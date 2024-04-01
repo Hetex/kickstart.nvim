@@ -17,6 +17,7 @@ vim.opt.tabstop = 4
 vim.opt.shortmess = 'I'
 vim.keymap.set('n', '<leader>e', '<Cmd>Neotree toggle<CR>', { desc = 'Toggle file tree' })
 vim.keymap.set('n', '<leader>\\', '<Cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
+vim.keymap.set('n', '<leader>`', '<Cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
 
 -- Make line numbers default
 vim.opt.number = true
