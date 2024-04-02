@@ -18,6 +18,8 @@ vim.opt.shortmess = 'I'
 vim.keymap.set('n', '<leader>e', '<Cmd>Neotree toggle<CR>', { desc = 'Toggle file tree' })
 vim.keymap.set('n', '<leader>\\', '<Cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
 vim.keymap.set('n', '<leader>`', '<Cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
+-- vim.api.nvim_set_keymap('n', '<leader>p>', ":lua require'telescope'.extensions.project.project{}<CR>", { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>p>', ":lua require'telescope'.extensions.project.project{}<CR>", { desc = 'Projects', noremap = true, silent = true })
 
 -- Make line numbers default
 vim.opt.number = true
