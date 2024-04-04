@@ -12,15 +12,6 @@ vim.g.have_nerd_font = true
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
--- Custom Config --
-vim.opt.tabstop = 4
-vim.opt.shortmess = 'I'
-vim.keymap.set('n', '<leader>e', '<Cmd>Neotree toggle<CR>', { desc = 'Toggle file tree' })
-vim.keymap.set('n', '<leader>\\', '<Cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
-vim.keymap.set('n', '<leader>`', '<Cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
--- vim.api.nvim_set_keymap('n', '<leader>p>', ":lua require'telescope'.extensions.project.project{}<CR>", { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>p>', ":lua require'telescope'.extensions.project.project{}<CR>", { desc = 'Projects', noremap = true, silent = true })
-
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
@@ -112,6 +103,16 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- Custom Config --
+vim.opt.tabstop = 4
+vim.opt.shortmess = 'I'
+vim.keymap.set('n', '<leader>e', '<Cmd>Neotree toggle<CR>', { desc = 'Toggle [E]xplorer' })
+vim.keymap.set('n', '<leader>\\', '<Cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
+vim.keymap.set('n', '<leader>`', '<Cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
+-- vim.api.nvim_set_keymap('n', '<leader>p>', ":lua require'telescope'.extensions.project.project{}<CR>", { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>p', ":lua require'telescope'.extensions.project.project{}<CR>", { desc = 'Projects', noremap = true, silent = true })
+vim.keymap.set('n', '<leader>p', ":lua require'telescope'.extensions.project.project{}<CR>", { desc = 'Projects', noremap = true, silent = true })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
