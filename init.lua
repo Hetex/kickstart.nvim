@@ -111,8 +111,7 @@ vim.keymap.set('n', '<leader>e', '<Cmd>Neotree toggle<CR>', { desc = 'Toggle [E]
 vim.keymap.set('n', '<leader>\\', '<Cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
 vim.keymap.set('n', '<leader>`', '<Cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
 -- vim.api.nvim_set_keymap('n', '<leader>p>', ":lua require'telescope'.extensions.project.project{}<CR>", { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>p', ":lua require'telescope'.extensions.project.project{}<CR>", { desc = 'Projects', noremap = true, silent = true })
-vim.keymap.set('n', '<leader>p', ":lua require'telescope'.extensions.project.project{}<CR>", { desc = 'Projects', noremap = true, silent = true })
+vim.keymap.set('n', '<leader>p', ":lua require'telescope'.extensions.projects.projects{}<CR>", { desc = 'Projects', noremap = true, silent = true })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -288,6 +287,7 @@ require('lazy').setup({
       -- Enable Telescope extensions if they are installed
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
+      pcall(require('telescope').load_extension, 'projects')
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
