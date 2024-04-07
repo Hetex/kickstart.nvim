@@ -1,7 +1,3 @@
-
-  'nyoom-engineering/oxocarbon.nvim',
-
-
 return {
   'rebelot/kanagawa.nvim',
   version = '*',
