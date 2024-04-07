@@ -104,14 +104,8 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- Custom Config --
-vim.opt.tabstop = 4
-vim.opt.shortmess = 'I'
-vim.keymap.set('n', '<leader>e', '<Cmd>Neotree toggle<CR>', { desc = 'Toggle [E]xplorer' })
-vim.keymap.set('n', '<leader>\\', '<Cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
-vim.keymap.set('n', '<leader>`', '<Cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
--- vim.api.nvim_set_keymap('n', '<leader>p>', ":lua require'telescope'.extensions.project.project{}<CR>", { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>p', ":lua require'telescope'.extensions.projects.projects{}<CR>", { desc = 'Projects', noremap = true, silent = true })
+require 'custom.config'
+require 'custom.keymaps'
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -686,8 +680,11 @@ require('lazy').setup({
     -- change the command in the config to whatever the name of that colorscheme is.
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    -- 'folke/tokyonight.nvim',
-    'projekt0n/github-nvim-theme',
+    'folke/tokyonight.nvim',
+    -- 'EdenEast/nightfox.nvim',
+    -- 'projekt0n/github-nvim-theme',
+    -- 'catppuccin/nvim',
+    -- 'navarasu/onedark.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- Load the colorscheme here.
@@ -695,12 +692,15 @@ require('lazy').setup({
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
 
       -- vim.cmd.colorscheme 'tokyonight-night'
+      -- vim.cmd.colorscheme 'catppuccin'
+      vim.cmd.colorscheme 'onedark'
+      -- vim.cmd.colorscheme 'nightfox'
       -- vim.cmd.colorscheme 'github_dark'
       -- vim.cmd.colorscheme 'kanagawa-wave'
       -- vim.cmd.colorscheme 'kanagawa-dragon'
       -- vim.cmd.colorscheme 'kanagawa-lotus'
       -- vim.cmd.colorscheme 'kanagawa-lotus'
-      vim.cmd.colorscheme 'oxocarbon'
+      -- vim.cmd.colorscheme 'oxocarbon'
 
       vim.opt.background = 'dark'
       -- You can configure highlights by doing something like:
