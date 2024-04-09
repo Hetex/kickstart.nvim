@@ -3,6 +3,7 @@ vim.opt.shortmess = 'I'
 
 -- colorscheme
 
+vim.opt.background = 'dark'
 vim.cmd.colorscheme 'onedark'
 -- vim.cmd.colorscheme 'tokyonight-night'
 -- vim.cmd.colorscheme 'catppuccin'
@@ -13,4 +14,3 @@ vim.cmd.colorscheme 'onedark'
 -- vim.cmd.colorscheme 'kanagawa-lotus'
 -- vim.cmd.colorscheme 'kanagawa-lotus'
 -- vim.cmd.colorscheme 'oxocarbon'
-vim.opt.background = 'dark'
