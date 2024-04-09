@@ -18,9 +18,6 @@ return {
   -- oxocarbon
   {
     'nyoom-engineering/oxocarbon.nvim',
-    config = function()
-      require('oxocarbon').setup {}
-    end,
   },
 
   -- nightfox
@@ -28,14 +25,6 @@ return {
     'EdenEast/nightfox.nvim',
     config = function()
       require('nightfox').setup {}
-    end,
-  },
-
-  -- github
-  {
-    'projekt0n/github-nvim-theme',
-    config = function()
-      require('github-nvim-theme').setup {}
     end,
   },
 
