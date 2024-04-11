@@ -1,8 +1,8 @@
 vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.shortmess = 'I'
 
 -- colorscheme
-
 vim.opt.background = 'dark'
 vim.cmd.colorscheme 'onedark'
 -- vim.cmd.colorscheme 'tokyonight-night'
