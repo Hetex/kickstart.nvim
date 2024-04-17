@@ -2,6 +2,8 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.shortmess = 'I'
 
+vim.opt.termguicolors = true
+
 -- colorscheme
 vim.opt.background = 'dark'
 vim.cmd.colorscheme 'onedark'
