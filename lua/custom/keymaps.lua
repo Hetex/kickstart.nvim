@@ -24,6 +24,14 @@ vim.keymap.set('n', '<S-TAB>', '<Cmd>bprev<CR>', { desc = 'Previous Buffer' })
 
 vim.keymap.set('n', '<leader>e', '<Cmd>Neotree toggle<CR>', { desc = 'Toggle [E]xplorer' })
 
+-- Terminal Mappings
+vim.keymap.set('t', '<esc><esc>', '<c-\\><c-n>', { desc = 'Enter Normal Mode' })
+vim.keymap.set('t', '<C-h>', '<cmd>wincmd h<cr>', { desc = 'Go to Left Window' })
+vim.keymap.set('t', '<C-j>', '<cmd>wincmd j<cr>', { desc = 'Go to Lower Window' })
+vim.keymap.set('t', '<C-k>', '<cmd>wincmd k<cr>', { desc = 'Go to Upper Window' })
+vim.keymap.set('t', '<C-l>', '<cmd>wincmd l<cr>', { desc = 'Go to Right Window' })
+vim.keymap.set('t', '<C-/>', '<cmd>close<cr>', { desc = 'Hide Terminal' })
+vim.keymap.set('t', '<c-_>', '<cmd>close<cr>', { desc = 'which_key_ignore' })
 vim.keymap.set('n', '<leader>\\', '<Cmd>ToggleTerm direction=horizontal<CR>', { desc = 'Toggle terminal' })
 vim.keymap.set('n', '<leader>`', '<Cmd>ToggleTerm direction=horizontal<CR>', { desc = 'Toggle terminal' })
 vim.keymap.set('n', '<leader>t', '<Cmd>ToggleTerm direction=float<CR>', { desc = 'Toggle floating terminal' })
