@@ -24,7 +24,8 @@ vim.keymap.set('n', '<S-TAB>', '<Cmd>bprev<CR>', { desc = 'Previous Buffer' })
 
 -- vim.keymap.set('n', '<leader>e', '<Cmd>Neotree toggle<CR>', { desc = 'Toggle [E]xplorer' })
 vim.keymap.set('n', '<leader>e', '<Cmd>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>', { desc = 'Toggle [E]xplorer' })
-vim.keymap.set('n', '<leader>p', ':execute "SessionSave" | %bd | Telescope persisted<CR>', { desc = 'Projects', noremap = true, silent = true })
+-- vim.keymap.set('n', '<leader>p', ':execute "SessionSave" | %bd | Telescope persisted<CR>', { desc = 'Projects', noremap = true, silent = true })
+vim.keymap.set('n', '<leader>p', ':Telescope persisted<CR>', { desc = 'Projects', noremap = true, silent = true })
 vim.keymap.set('n', '<leader>P', ":lua require'telescope'.extensions.projects.projects{}<CR>", { desc = 'Projects', noremap = true, silent = true })
 
 -- Terminal Mappings

@@ -855,3 +855,4 @@ require('lazy').setup({
 require 'custom.config'
 require 'custom.keymaps'
 require 'custom.snippets'
+require 'custom.hooks'
