@@ -24,6 +24,8 @@ vim.keymap.set('n', '<S-TAB>', '<Cmd>bprev<CR>', { desc = 'Previous Buffer' })
 
 -- vim.keymap.set('n', '<leader>e', '<Cmd>Neotree toggle<CR>', { desc = 'Toggle [E]xplorer' })
 vim.keymap.set('n', '<leader>e', '<Cmd>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>', { desc = 'Toggle [E]xplorer' })
+vim.keymap.set('n', '<leader>p', ':execute "SessionSave" | %bd | Telescope persisted<CR>', { desc = 'Projects', noremap = true, silent = true })
+vim.keymap.set('n', '<leader>P', ":lua require'telescope'.extensions.projects.projects{}<CR>", { desc = 'Projects', noremap = true, silent = true })
 
 -- Terminal Mappings
 vim.keymap.set('t', '<esc><esc>', '<c-\\><c-n>', { desc = 'Enter Normal Mode' })
@@ -36,8 +38,6 @@ vim.keymap.set('t', '<c-_>', '<cmd>close<cr>', { desc = 'which_key_ignore' })
 vim.keymap.set('n', '<leader>\\', '<Cmd>ToggleTerm direction=horizontal<CR>', { desc = 'Toggle terminal' })
 vim.keymap.set('n', '<leader>`', '<Cmd>ToggleTerm direction=horizontal<CR>', { desc = 'Toggle terminal' })
 vim.keymap.set('n', '<leader>t', '<Cmd>ToggleTerm direction=float<CR>', { desc = 'Toggle floating terminal' })
-
-vim.keymap.set('n', '<leader>p', ":lua require'telescope'.extensions.projects.projects{}<CR>", { desc = 'Projects', noremap = true, silent = true })
 
 vim.keymap.set('n', '<leader>sR', '<cmd>lua require("spectre").toggle()<CR>', {
   desc = 'Toggle Spectre',
