@@ -2,8 +2,9 @@ return {
   'ahmedkhalf/project.nvim',
   version = '*',
   dependencies = {},
-  opts = {},
-  config = function(_, opts)
-    require('project_nvim').setup(opts)
+  config = function()
+    require('project_nvim').setup {
+      manual_mode = true,
+    }
   end,
 }
