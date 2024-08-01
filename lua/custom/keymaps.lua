@@ -74,3 +74,24 @@ vim.api.nvim_set_keymap('', '<D-v>', '+p<CR>', { noremap = true, silent = true }
 vim.api.nvim_set_keymap('!', '<D-v>', '<C-R>+', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('t', '<D-v>', '<C-R>+', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true })
+
+-- Enable git_files with find_files fall back
+local is_inside_work_tree = {}
+local project_files = function()
+  local opts = {} -- define here if you want to define something
+
+  local cwd = vim.fn.getcwd()
+  if is_inside_work_tree[cwd] == nil then
+    vim.fn.system 'git rev-parse --is-inside-work-tree'
+    is_inside_work_tree[cwd] = vim.v.shell_error == 0
+  end
+
+  if is_inside_work_tree[cwd] then
+    require('telescope.builtin').git_files(opts)
+  else
+    require('telescope.builtin').find_files(opts)
+  end
+end
+
+vim.keymap.set('n', '<leader>sf', project_files, { desc = '[S]earch [F]iles' })
+vim.keymap.set('n', '<leader>sa', ":lua require'telescope.builtin'.find_files{ hidden = true}<CR>", { desc = '[S]earch [A] Files' })
